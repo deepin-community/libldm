@@ -1,5 +1,101 @@
-template-repository (1.0-1) unstable; urgency=medium
+libldm (0.2.5-2) unstable; urgency=medium
+
+  * Add upstream patches to fix null pointer dereference, GCC-15 FTBFS
+    (Closes: 1097224)
+  * Bump Standards-Version
+  * Replace pkg-config build-dependency
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 26 Sep 2025 11:39:44 +0200
+
+libldm (0.2.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1062396
+
+ -- Benjamin Drung <bdrung@debian.org>  Wed, 28 Feb 2024 13:32:55 +0000
+
+libldm (0.2.5-1) unstable; urgency=medium
+
+  * New upstream version 0.2.5
+  * Drop patches that have been integrated upstream
+  * Update symbols file
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 11 May 2021 01:02:03 +0200
+
+libldm (0.2.4-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Hilko Bengen ]
+  * Replace existing G_ADD_PRIVATE patch
+  * Fix FTBFS by replacing *_GET_PRIVATE macros (Closes: #944397)
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 09 Nov 2019 11:37:27 +0100
+
+libldm (0.2.4-2) unstable; urgency=medium
+
+  * Fix FTBFS due to use of deprecated glib function (Closes: #908014)
+  * Bump Standards-Version
+  ' Add .symbols file
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 13 Sep 2018 09:35:45 +0200
+
+libldm (0.2.4-1) unstable; urgency=medium
+
+  * New upstream version 0.2.4
+  * Bump Standards-Version
+  * Drop patches -- everything has been integrated upstream.
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 26 Apr 2018 12:54:32 +0200
+
+libldm (0.2.3-7) unstable; urgency=medium
+
+  * Move package to salsa.debian.org
+  * Bump Standards-Version, set Section to optional
+  * Improve ldmtool description (Closes: #890972)
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 22 Feb 2018 11:25:20 +0100
+
+libldm (0.2.3-6) unstable; urgency=medium
+
+  * Eliminate -dbg package
+  * Add patch to fix FTBFS with glibc 2.26, thanks to Matthias Klose
+    (Closes: #881168)
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 09 Nov 2017 00:09:28 +0100
+
+libldm (0.2.3-5) unstable; urgency=medium
+
+  * Add patch to fix FTBFS with GCC 7 (Closes: #853496)
+  * Add patch to fix uninitialized variable error, thanks to Steve Langasek
+    (Closes: #829266)
+  * Modernize package: Bump Standards-Version, Debhelper compat level
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 07 Aug 2017 00:01:48 +0200
+
+libldm (0.2.3-4) unstable; urgency=medium
+
+  * Make libldm* support multi-arch
+  * Bump Standards-Version
+  * Add Vcs-* headers
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 24 Jan 2016 18:06:48 +0100
+
+libldm (0.2.3-3) unstable; urgency=medium
+
+  * Added patches to fix FTBFS (Closes: #751410)
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 13 Jun 2014 23:06:56 +0200
+
+libldm (0.2.3-2) unstable; urgency=medium
+
+  * Fixed building ldmtool with newer glib versions (Closes: #710641)
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 01 Jun 2013 12:09:38 +0200
+
+libldm (0.2.3-1) unstable; urgency=low
 
   * Initial release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Hilko Bengen <bengen@debian.org>  Sat, 05 Jan 2013 15:17:39 +0100
