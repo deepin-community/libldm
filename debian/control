@@ -1,15 +1,55 @@
-Source: template-repository
-Section: unknown
+Source: libldm
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Hilko Bengen <bengen@debian.org>
+Build-Depends: dpkg-dev (>= 1.22.5), debhelper (>= 10~),
+ pkgconf,
+ libglib2.0-dev,
+ libjson-glib-dev,
+ zlib1g-dev,
+ uuid-dev,
+ libdevmapper-dev, libudev-dev,
+ libreadline-dev,
+ gtk-doc-tools,
+Standards-Version: 4.7.2
+Section: libs
+Homepage: https://github.com/mdbooth/libldm
+Vcs-Git: https://salsa.debian.org/debian/libldm.git
+Vcs-Browser: https://salsa.debian.org/debian/libldm
 
-Package: template-repository
+Package: libldm-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libldm-1.0-0t64 (= ${binary:Version}), ${misc:Depends}
+Description: library for managing Microsoft Windows dynamic disks
+ libldm is a library for managing Microsoft Windows dynamic disks,
+ which use Microsoft's LDM metadata. It can inspect them, and also
+ create and remove device-mapper block devices which can be mounted.
+ .
+ This package includes the headers
+
+Package: libldm-1.0-0t64
+Provides: ${t64:Provides}
+Replaces: libldm-1.0-0
+Breaks: libldm-1.0-0 (<< ${source:Version})
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends},
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library for managing Microsoft Windows dynamic disks
+ libldm is a library for managing Microsoft Windows dynamic disks,
+ which use Microsoft's LDM metadata. It can inspect them, and also
+ create and remove device-mapper block devices which can be mounted.
+
+Package: ldmtool
+Section: otherosfs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: tool for managing Microsoft Windows dynamic disks
+ ldmtool exposes libldm's functionality as a command-line tool.
+ .
+ libldm is a library for managing Microsoft Windows dynamic disks,
+ which use Microsoft's LDM metadata. It can inspect them, and also
+ create and remove device-mapper block devices which can be mounted.
