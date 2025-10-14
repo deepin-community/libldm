@@ -21,7 +21,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libldm-1.0-0t64 (= ${binary:Version}), ${misc:Depends}
+Depends: libldm-1.0-0 (= ${binary:Version}), ${misc:Depends}
 Description: library for managing Microsoft Windows dynamic disks
  libldm is a library for managing Microsoft Windows dynamic disks,
  which use Microsoft's LDM metadata. It can inspect them, and also
@@ -29,10 +29,7 @@ Description: library for managing Microsoft Windows dynamic disks
  .
  This package includes the headers
 
-Package: libldm-1.0-0t64
-Provides: ${t64:Provides}
-Replaces: libldm-1.0-0
-Breaks: libldm-1.0-0 (<< ${source:Version})
+Package: libldm-1.0-0
 Section: libs
 Architecture: any
 Multi-Arch: same
