@@ -1,4 +1,4 @@
-libldm-1.0.so.0 libldm-1.0-0t64 #MINVER#
+libldm-1.0.so.0 libldm-1.0-0 #MINVER#
  (optional|regex)^_ 0
  (optional|regex)^gpt_ 0
  (optional|regex)^mbr_ 0
