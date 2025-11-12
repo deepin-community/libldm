@@ -1,3 +1,9 @@
+libldm (0.2.5-2deepin1) experimental; urgency=medium
+
+  * Revert libraries from 64-bit time transition state
+
+ -- VZstless <vzstless@qq.com>  Wed, 12 Nov 2025 15:17:22 +0800
+
 libldm (0.2.5-2) unstable; urgency=medium
 
   * Add upstream patches to fix null pointer dereference, GCC-15 FTBFS
